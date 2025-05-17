@@ -1,11 +1,21 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vuetify from 'vite-plugin-vuetify'
-
+import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    vuetify({ autoImport: true })
-  ]
+    vuetify({ 
+      styles: {
+        configFile: 'src/styles/settings.scss',
+      },
+      autoImport: true 
+    })
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
 })
