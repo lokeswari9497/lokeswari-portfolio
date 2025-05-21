@@ -26,15 +26,45 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
 }
-
-/* App layout */
 #app-root {
   background-color: #efefef;
 }
-/* vuetify default app structure doesn't support max-width, centered layouts */
-/* https://github.com/vuetifyjs/vuetify/issues/4267 */
 .v-application__wrap {
   max-width: 1440px !important;
   margin: auto;
+  padding: 0 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+  word-break: break-word;
+  line-height: 1.2;
+}
+button {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .v-application__wrap {
+    padding: 0 12px;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  .v-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px !important;
+  }
+  .hero-section {
+    padding-top: 100px !important;
+    text-align: center;
+  }
+  .text-justify {
+    text-align: left !important; /* Justify doesn't work well on mobile */
+  }
 }
 </style>
