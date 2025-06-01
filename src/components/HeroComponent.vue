@@ -59,7 +59,7 @@ const scrollTo = (sectionId: string): void => {
 }
 
 const downloadCV = (): void => {
-  window.open('/cv.pdf', '_blank')
+  window.open('/Lokeswari_Cv.pdf', '_blank')
 }
 
 onMounted(() => {
